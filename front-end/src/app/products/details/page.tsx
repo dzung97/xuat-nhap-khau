@@ -1,6 +1,6 @@
 "use client"
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ArrowLeft, Leaf, Star, Globe, Package, CheckCircle, Truck, Calendar, Award, BarChart3, Map, FileText } from "lucide-react";
@@ -443,7 +443,7 @@ interface ProductItem {
                     Thị trường xuất khẩu
                   </h3>
                   <div className="grid gap-4">
-                    {product.exportMarkets.map((market: any, index: number) => (
+                    {product.exportMarkets.map((market: ExportMarket, index: number) => (
                       <div key={index} className="bg-gradient-to-r from-green-50 to-emerald-50 p-4 rounded-lg border border-green-200">
                         <div className="flex justify-between items-center">
                           <div>

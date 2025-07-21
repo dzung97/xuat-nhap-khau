@@ -10,7 +10,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
-import { ArrowLeft, Leaf, Send, Phone, Mail, Building, Package } from "lucide-react";
+import { ArrowLeft, Send, Phone, Mail, Building, Package } from "lucide-react";
 import { useState } from "react";
 import Header from "@/components/Header";
 import Link from "next/link";

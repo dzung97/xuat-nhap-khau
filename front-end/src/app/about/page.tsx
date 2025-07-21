@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Leaf, Users, Award, Globe, TrendingUp, Target, Heart, Shield, Lightbulb, CheckCircle } from "lucide-react";
+import { ArrowLeft, Heart, Shield, Lightbulb, CheckCircle } from "lucide-react";
 import Header from "@/components/Header";
 import Link from "next/link";
 
