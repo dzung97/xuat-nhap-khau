@@ -1,6 +1,7 @@
 
 'use client';
 import { useSearchParams } from 'next/navigation';
+import { Suspense } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -45,6 +46,8 @@ export default function QuoteRequest() {
   };
 
   return (
+    <Suspense fallback={<div>Đang tải chi tiết sản phẩm...</div>}>
+
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100">
       {/* Header */}
       <Header/>
@@ -320,5 +323,7 @@ export default function QuoteRequest() {
         </div>
       </div>
     </div>
+    </Suspense>
+
   );
 }

@@ -1,4 +1,5 @@
 "use client"
+import { Suspense } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -243,6 +244,9 @@ interface ProductItem {
   const product = productData[productId] || productData['1'];
 
   return (
+     <Suspense fallback={<div>Đang tải chi tiết sản phẩm...</div>}>
+
+     
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100">
       {/* Header */}
       <header className="bg-white/95 backdrop-blur-sm border-b border-green-100 sticky top-0 z-50">
@@ -505,5 +509,6 @@ interface ProductItem {
         </div>
       </div>
     </div>
+    </Suspense>
   );
 }
