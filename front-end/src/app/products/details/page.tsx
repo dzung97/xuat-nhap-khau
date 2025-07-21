@@ -9,8 +9,40 @@ import { useSearchParams } from 'next/navigation';
 export default function ProductDetails() {
    const searchParams = useSearchParams(); // ✅ NOT destructured
   const productId = searchParams.get('id') || '1';
+  type ProductSpecification = { [key: string]: string };
+
+type NutritionalValue = { [key: string]: string };
+
+type HarvestInfo = { [key: string]: string };
+
+type ExportMarket = {
+  country: string;
+  volume: string;
+  standard: string;
+};
+
+interface ProductItem {
+  name: string;
+  englishName: string;
+  image: string;
+  price: string;
+  unit: string;
+  origin: string;
+  season: string;
+  rating: number;
+  description: string;
+  detailedDescription: string;
+  specifications: ProductSpecification;
+  nutritionalValue: NutritionalValue;
+  harvestInfo: HarvestInfo;
+  packaging: string[];
+  exportMarkets: ExportMarket[];
+  certifications: string[];
+  advantages: string[];
+}
+
   // Mock product data - in real app this would come from API
-  const productData: { [key: string]: any } = {
+  const productData: { [key: string]: ProductItem } = {
     '1': {
       name: "Chanh Tươi",
       englishName: "Fresh Lime",
